@@ -19,11 +19,11 @@ export class UserService {
 
   constructor(private http: HttpClient) { }
 
-  getUsers(): Observable<User[]> {
+  public getUsers(): Observable<User[]> {
     return this.http.get<User[]>(this.baseUrl, httpsOptions);
   }
 
-  getUser(id: number): Observable<User> {
+  public getUser(id: number): Observable<User> {
     return this.http.get<User>(this.baseUrl + id, httpsOptions);
   }
 }
